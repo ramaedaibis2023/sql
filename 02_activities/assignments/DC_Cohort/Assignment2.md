@@ -57,7 +57,7 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+In Type 1 (overwrite), each customer has only one address record in the CUSTOMER_ADDRESS table. When their address changes, the existing record is updated, replacing the previous address. In Type 2 (retain history), multiple address records can exist for the same customer. Instead of overwriting the old address, a new record is created, with additional columns such as start_date, end_date, and is_current to track address changes over time. Therefore, Type 1 maintains only the current address (1:1 relationship), while Type 2 preserves address history (1:many relationship).
 ```
 
 ***
@@ -193,5 +193,9 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+In Vicki Boykis's article, *Neural Nets Are Just People All the Way Down (2019), one of the main ethical issues is the often-invisible human labour behind artificial intelligence. Although AI is presented as automated technology, people collect, label, and organize the data used to train these systems, often through low-paid work on platforms such as Amazon Mechanical Turk. This raises concerns about exploiting workers whose contributions are essential to developing AI but are often overlooked or undervalued.
+
+Another important issue is bias. Human decisions shape how information is categorized and labeled, so personal assumptions, cultural perspectives, and societal prejudices can become embedded in AI systems. This can lead to discriminatory or offensive outcomes, particularly when AI is used to classify images, recognize faces, or interpret language. The issue becomes more complicated because the people responsible for correcting these biases may not represent the diversity of the populations affected by the technology.
+
+The article also raises questions about content moderation and accountability. Human workers are often required to review disturbing, offensive, or harmful content to ensure that AI systems can recognize and filter it appropriately. This raises ethical concerns about workers' well-being and companies' responsibility to protect them. As AI and LLMs become more widespread, these concerns grow because biased or poorly managed training data can influence technologies used by millions of people while continuing to exploit the human workers that make this technology possible. Ultimately, the article highlights that technology does not exist independently of society; it reflects the people, labor, and values involved in creating it.
 ```
